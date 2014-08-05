@@ -23,7 +23,7 @@ coffeelint = require('gulp-coffeelint')
 imagemin = require('gulp-imagemin')
 pngcrush = require('imagemin-pngcrush')
 # Connect
-connect = require("gulp-connect")
+webserver = require('gulp-webserver')
 
 ##############################################################################
 # Ordered list of paths
@@ -54,8 +54,8 @@ gulp.task "jade", ->
         .pipe(plumber())
         .pipe(cache("jade"))
         .pipe(jade({pretty: true}))
+        .pipe(size())
         .pipe(gulp.dest(paths.dist))
-        .pipe(connect.reload())
 
 gulp.task "htmlhint", ->
     gulp.src(paths.html)
@@ -76,8 +76,8 @@ gulp.task "sass", ["scsslint"], ->
     gulp.src([paths.scssMain])
         .pipe(plumber())
         .pipe(sass())
+        .pipe(size())
         .pipe(gulp.dest(paths.dist + "/styles"))
-        .pipe(connect.reload())
 
 gulp.task "csslint", ->
     gulp.src(paths.cssMainDist)
@@ -131,16 +131,16 @@ gulp.task "copy",  ->
 
 # Rerun the task when a file changes
 gulp.task "watch", ->
-    gulp.watch(paths.jade, ["jade"])
+    gulp.watch(paths.jade, ["jade", "htmlhint"])
     gulp.watch(paths.scss, ["scsslint", "sass", "csslint"])
+    gulp.watch(paths.coffee, ["coffeelint", "coffee"])
 
-gulp.task('connect', ->
-    connect.server({
-        root: paths.dist,
-        port: 8080,
-        livereload: true
-    });
-);
+gulp.task 'webserver', ->
+    gulp.src(paths.dist)
+        .pipe(webserver({
+            livereload: true,
+            port: 8080
+        }))
 
 ##############################################################################
 # manage Tasks
@@ -156,6 +156,6 @@ gulp.task "default", [
     "coffee",
     "imagemin",
     "copy",
-    "connect",
+    "webserver",
     "watch"
 ]
