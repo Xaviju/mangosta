@@ -1,0 +1,22 @@
+{
+  "name": "transgular",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [
+    "Xavier Julián <xavier.julian@kaleidos.net>"
+  ],
+  "description": "Angular common CSS3 animations",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "3.2.3",
+    "angular": "~1.2.21",
+    "normalize.css": "~3.0.1"
+  }
+}
