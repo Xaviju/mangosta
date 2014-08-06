@@ -1,7 +1,7 @@
 {
-  "name": "Transgular",
+  "name": "Mangosta",
   "version": "0.0.0",
-  "description": "Angular common CSS3 animations",
+  "description": "Bullet-proof front-end architecture for fast development",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

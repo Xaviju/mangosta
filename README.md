@@ -74,3 +74,10 @@ Streaming gulp plugin to run a [local webserver](https://www.npmjs.org/package/g
 **PageSpeed (or similar)**
 *Althought there is a grunt tool (and it can be used in gulp) there is no native gulp tool for a constact development optimization warnings*
 [Grunt-PageSpeed](https://github.com/jrcryer/grunt-pagespeed) Run mobile and desktop performance tests for your deployed site using Google PageSpeed Insights, uses psi and gpagespeed.
+
+##More Reading
+[OOCSS](http://oocss.org/)
+[Modularizing Your Front-End Code for Long Term Maintainability and Sanity](http://blog.berndtgroup.net/?p=561)
+[Modular front-end development with LESS](http://tympanus.net/codrops/2012/01/27/modular-front-end-development-with-less/)
+[Sass File Organization](https://github.com/sass/sass-site/tree/master/source/assets/css)
+[How to structure a Sass project](http://thesassway.com/beginner/how-to-structure-a-sass-project)

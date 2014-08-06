@@ -1,11 +1,11 @@
 {
-  "name": "transgular",
+  "name": "Mangosta",
   "version": "0.0.0",
   "homepage": "",
   "authors": [
     "Xavier Julián <xavier.julian@kaleidos.net>"
   ],
-  "description": "Angular common CSS3 animations",
+  "description": "Bullet-proof front-end architecture for fast development",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -16,7 +16,6 @@
   ],
   "dependencies": {
     "bourbon": "3.2.3",
-    "angular": "~1.2.21",
     "normalize.css": "~3.0.1"
   }
 }
