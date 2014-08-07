@@ -29,10 +29,16 @@ $prefix-for-spec:      true;
 //********************************************
 // COMPONENTS - Reusable pieces of code
 //********************************************
+@import 'components/buttons';
 
 //********************************************
 // MODULES - Single pieces of code
 //********************************************
+//Common
+@import 'modules/common/menu';
+
+//Home
+@import 'modules/home/home';
 
 //********************************************
 // SHAME

@@ -7,3 +7,7 @@ $large-margin: 2rem;
 $small-padding: .5rem;
 $padding: 1rem;
 $large-padding: 2rem;
+
+.icon {
+    @extend %mangosta;
+}

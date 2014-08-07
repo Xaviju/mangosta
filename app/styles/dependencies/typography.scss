@@ -1,13 +1,12 @@
-//Uncomment to use fonts
-//@each $font-face in DroidSans, DroidSans-Bold {
-//    @font-face {
-//        font-family: '#{$font-face}';
-//        src: url('../fonts/#{$font-face}.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/#{$font-face}.woff') format('woff'),
-//        url('../fonts/#{$font-face}.ttf')  format('truetype'),
-//        url('../fonts/#{$font-face}.svg#{$font-face}') format('svg');
-//    }
-//}
+@each $font-face in Roboto-Regular, Roboto-Bold, RobotoSlab-Regular, RobotoSlab-Bold, mangosta {
+    @font-face {
+        font-family: '#{$font-face}';
+        src: url('../fonts/#{$font-face}.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/#{$font-face}.woff') format('woff'),
+        url('../fonts/#{$font-face}.ttf')  format('truetype'),
+        url('../fonts/#{$font-face}.svg#{$font-face}') format('svg');
+    }
+}
 
 h1,
 h2,
@@ -27,12 +26,13 @@ h6 {
 %larger {font-size: 1.6rem;}
 %xlarge {font-size: 2rem;}
 %xxlarge {font-size: 3rem;}
+%xxxlarge {font-size: 6rem;}
 
 // __Font Types__ //
-//%title {font-family: 'DroidSans';}
-//%text {font-family: 'DroidSans';}
-//%bold {font-family: 'DroidSans-Bold';}
-//%taiga {font-family: 'taiga';}
+%title {font-family: 'RobotoSlab-Bold', serif;}
+%regular {font-family: 'Roboto-Regular';}
+%bold {font-family: 'Roboto-Bold';}
+%mangosta {font-family: 'mangosta';}
 
 
 // Font styles
@@ -50,6 +50,7 @@ h3 {
 }
 
 p {
+    @extend %regular;
     margin: 0 0 $margin;
     img {
         margin: 0;
@@ -78,4 +79,47 @@ a,
 a:visited {
     color: $gray;
     text-decoration: none;
+}
+
+//mangosta font
+[data-icon]:before {
+    content: attr(data-icon);
+    font-family: 'mangosta' !important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: normal !important;
+    line-height: 1;
+    speak: none;
+    text-transform: none !important;
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+    font-family: 'mangosta' !important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: normal !important;
+    line-height: 1;
+    speak: none;
+    text-transform: none !important;
+}
+
+.icon-bug:before {
+    content: 'a';
+}
+.icon-checklist:before {
+    content: 'b';
+}
+.icon-clock:before {
+    content: 'c';
+}
+.icon-gist:before {
+    content: 'e';
+}
+.icon-screen-normal:before {
+    content: 'd';
 }
