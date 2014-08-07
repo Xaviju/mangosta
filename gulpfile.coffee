@@ -42,7 +42,12 @@ paths = {
     cssMainDist: "dist/styles/main.css",
     #################
     coffee: "app/scripts/**/*.coffee" #This will probably will become a ordered list of files because of JS order dependency
+    #################
     imageMain: "app/images/*"
+    imageDist: "dist/images/"
+    ##################
+    fontsMain: "app/fonts/*"
+    fontsDist: "dist/fonts/"
 }
 
 ##############################################################################
@@ -77,7 +82,7 @@ gulp.task "sass", ["scsslint"], ->
         .pipe(plumber())
         .pipe(sass())
         .pipe(size())
-        .pipe(gulp.dest(paths.dist + "/styles"))
+        .pipe(gulp.dest(paths.cssDistFold))
 
 gulp.task "csslint", ->
     gulp.src(paths.cssMainDist)
@@ -113,17 +118,16 @@ gulp.task 'imagemin', ->
             svgoPlugins: [{removeViewBox: false}],
             use: [pngcrush()]
         }))
-        .pipe(gulp.dest('dist'))
-
+        .pipe(gulp.dest(paths.imageDist))
 
 ##############################################################################
 # Common related tasks
 ##############################################################################
 
-# Copy Vendor
+#Copy Fonts
 gulp.task "copy",  ->
-    gulp.src("#{paths.app}/vendor/**/*, #{paths.app}/fonts/**/*")
-        .pipe(gulp.dest(paths.dist))
+    gulp.src(paths.fontsMain)
+        .pipe(gulp.dest(paths.fontsDist))
 
 ##############################################################################
 # Server Related tasks
