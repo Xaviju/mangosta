@@ -61,7 +61,7 @@ Streaming gulp plugin to run a [local webserver](https://www.npmjs.org/package/g
 ##What do we still need? Would you like to help out?
 
 **Sass Documentation**
-*Still learning how to use it properly. So far is a pain*
+*Still learning how to use it properly. It would be awesome to have a simple and fast tool for styles documentation but didn't find a fast and reliable solution so far*
 [SassDoc](http://sassdoc.com/) Like JSDoc for your Sass files. Options available in its [github repo](https://github.com/SassDoc/sassdoc)
 
 **Remove unused CSS**
@@ -72,7 +72,7 @@ Streaming gulp plugin to run a [local webserver](https://www.npmjs.org/package/g
 *No plugins as far as I know but we would love to have a critical path warning signal and maybe a generator*
 
 **PageSpeed (or similar)**
-*Althought there is a grunt tool (and it can be used in gulp) there is no native gulp tool for a constact development optimization warnings*
+*Althought there is a grunt tool (and it can be used in gulp) there is no native gulp tool for a constant development optimization warnings*
 [Grunt-PageSpeed](https://github.com/jrcryer/grunt-pagespeed) Run mobile and desktop performance tests for your deployed site using Google PageSpeed Insights, uses psi and gpagespeed.
 
 ##More Reading
